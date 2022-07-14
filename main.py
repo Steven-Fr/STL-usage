@@ -9,7 +9,7 @@ mesh = Mesh.from_file(filename)
 
 machine = "XS"
 x_trasl = -2000
-y_trasl = -2000
+y_trasl = -1500
 z_trasl = -1500
 
 
@@ -25,8 +25,11 @@ elif machine == "XS":
     mesh2 =  Mesh.from_file(r"Modello 3D\XS.stl")
 
 
+R = mesh.get_rotation_matrix_from_xyz((np.pi / 2, 0, np.pi / 4))
 
+mesh.rotate(0, theta ,point)
 
+#mesh.rotate((90,90,90), (0, 0, 0))
 
 
 def bounding_box(points):

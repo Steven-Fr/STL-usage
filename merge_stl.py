@@ -10,7 +10,7 @@ def combined_stl(meshes, save_path="./output.stl"):    #nome file uscita
 
 
 
-direc = r"C:\Users\sat11\Desktop\stl_python\Modello 3D\DIA"    #cartella con tutti stl da unire
+direc = r"C:\Users\sat11\Desktop\vuota"    #cartella con tutti stl da unire
 paths = [os.path.join(direc, i) for i in os.listdir(direc)]
 meshes = [mesh.Mesh.from_file(path) for path in paths]
 combined_stl(meshes)
